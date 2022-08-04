@@ -1,12 +1,12 @@
 # Smallsh
 
-POSIX shell with built-in commands. All other commands run as child processes using fork() and exec(). Includes signal handlers, variable expansion, input and output redirection, and backgruond and foreground processing
+A small POSIX shell with built-in commands. Any command that is not built in runs as child processes using fork() and exec(). Includes background and foreground processing, signal handlers, variable expansion, and input and output redirection 
 
 ## Features
 
 ### Built In Commands
 
-  CD: This command takes one argument for either relative or absolute paths. If no argument is entered it takes you to the root directory specified by the HOME enviroment variable.
+  CD: This command takes one argument for either relative or absolute paths. If no argument is entered it takes you to the root directory specified by the HOME environment variable.
   
   Status: This returns the exit status of the last foreground process that has been run.
   
@@ -24,15 +24,15 @@ Commands with '&' at the end are run as background processes. The shell does not
 
 ### Signal Handlers
 
-Inludes signal handlers for SIGINT (CTRL+C) and SIGTSTP (CTRL+Z) 
+Includes signal handlers for SIGINT (CTRL+C) and SIGTSTP (CTRL+Z) 
 
 SIGINT is ignored by shell and all background processes
 
-SIGINT terminates all foreground child processes, printing out PID of the process and the signal that killed it
+SIGINT terminates all foreground child processes, printing out process ID of the process and the signal that killed it
 
-All child processes, foreground and background, ignore SIGTSTP
+All child processes, both foreground and background, ignore SIGTSTP
 
-SIGTSTP flips shell into 'foreground only mode' where '&' is ignored until shell receives SIGTSTP again
+SIGTSTP turns shell into foreground only mode where '&' is ignored until shell receives SIGTSTP again
 
 ## Compiling & Executing
 How to compile smallsh:
