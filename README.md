@@ -12,7 +12,29 @@ POSIX shell with built-in commands. All other commands run as child processes us
   
   Exit: By typing exit all background and foreground process will be terminated and the application will exit.
 
-## Compiling & Running
+### Capabilities
+
+Variable Expansion: Any instance of "$$" in a command will be replaced by the process ID of the shell.
+
+The shell can handle both lines that are blank and also lines that begin with # as comments.
+
+Has the ability to do input and output redirection with < and > just like a bash shell.
+
+Commands with '&' at the end are run as background processes. The shell does not wait for the process to terminate and will continue on. Thus, the shell is able to run multiple process at the same time. 
+
+### Signal Handlers
+
+Inludes signal handlers for SIGINT (CTRL+C) and SIGTSTP (CTRL+Z) 
+
+SIGINT is ignored by shell and all background processes
+
+SIGINT terminates all foreground child processes, printing out PID of the process and the signal that killed it
+
+All child processes, foreground and background, ignore SIGTSTP
+
+SIGTSTP flips shell into 'foreground only mode' where '&' is ignored until shell receives SIGTSTP again
+
+## Compiling & Executing
 How to compile smallsh:
 
 In order to compile the project, first place the files in a directory making sure that all the c files, 
