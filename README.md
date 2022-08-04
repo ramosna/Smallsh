@@ -1,5 +1,9 @@
 # Smallsh
 
+## Description
+
+
+## Compiling & Running
 How to compile smallsh:
 
 In order to compile the project, first place the files in a directory making sure that all the c files, 
