@@ -4,7 +4,7 @@ POSIX shell with built-in commands. All other commands run as child processes us
 
 ## Features
 
-###Built In Commands
+### Built In Commands
 
   CD: This command takes one argument for either relative or absolute paths. If no argument is entered it takes you to the root directory specified by the HOME enviroment variable.
   
