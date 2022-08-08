@@ -22,6 +22,8 @@ Has the ability to do input and output redirection with < and > just like a bash
 
 Commands with '&' at the end are run as background processes. The shell does not wait for the process to terminate and will continue on. Thus, the shell is able to run multiple process at the same time. 
 
+All other commands are executed as child processes using fork() and exec().
+
 ### Signal Handlers
 
 Includes signal handlers for SIGINT (CTRL+C) and SIGTSTP (CTRL+Z) 
