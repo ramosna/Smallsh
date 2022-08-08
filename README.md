@@ -2,6 +2,8 @@
 
 A small POSIX shell with built-in commands. Any command that is not built in runs as child processes using fork() and exec(). Includes background and foreground processing, signal handlers, variable expansion, and input and output redirection 
 
+![Smallsh](gifs/smallsh.gif)
+
 ## Features
 
 ### Built In Commands
